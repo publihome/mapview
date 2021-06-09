@@ -30,7 +30,6 @@ function getData(medio = ""){
         $.ajax({
             url:'/getinfo',
             data:{medio},
-            type:'post'
         })
         .done(function(response){
             console.log(response)
