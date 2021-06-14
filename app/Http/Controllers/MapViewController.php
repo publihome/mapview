@@ -17,18 +17,20 @@ class MapViewController extends Controller
         
     }
 
-    public function index(){
-        return view('public.mapview');
-    }
+    // public function index(){
+    //     return view('public.mapview');
+    // }
 
     public function getData(){
-        return $this->MapModel->getEspectaculares();
+        $data["espectaculares"] = $this->MapModel->getEspectaculares();
+        $data["vallas"] = $this->MapModel->getVallas();
+        return response($data);
     }
 
-    public function getinfo(Request $request){
-        $medio = $request->input();
-        return $medio;
-        exit;
-        return $this->MapModel->getMediosByType();
+    public function getDataByMedio(Request $request){
+        $medio = $request->input('type');
+         return $this->MapModel->getDataByMedio($medio);
+        
     }
+
 }

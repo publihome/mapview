@@ -19,6 +19,6 @@ use App\Http\Controllers\MapViewController;
 // });
 
 
-Route::get('/', [MapViewController::class, 'index']);
-Route::get('/getData', [MapViewController::class, 'getData']);
-Route::post('/getinfo', [MapViewController::class, 'getinfo']);
+// Route::get('/', [MapViewController::class, 'index']);
+// Route::get('/getData', [MapViewController::class, 'getData']);
+// Route::post('/getinfo', [MapViewController::class, 'getinfo']);
